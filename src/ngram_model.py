@@ -8,7 +8,7 @@ def generate_ngrams(tokens: str, n: int) -> list:
     """
     ngrams = []
     for i in range(len(tokens) - n + 1):
-        ngram = text[i:i+n]
+        ngram = tokens[i:i+n]
         ngrams.append(ngram)
     return ngrams
 
@@ -28,7 +28,7 @@ def build_ngram_model(corpus: list, n: int) -> dict:
         ngrams = generate_ngrams(sentence, n)
         for ngram in ngrams:
             if ngram in ngram_model:
-                ngram_model[ngram] += 1
+                ngram_model[" ".join(ngram)] += 1
             else:
-                ngram_model[ngram] = 1
+                ngram_model[" ".join(ngram)] = 1
     return ngram_model
