@@ -1,6 +1,7 @@
 # spell_checker.py
 from damerau_levenshtein import damerau_levenshtein_distance
 from ngram_model import build_ngram_model, generate_ngrams
+from utils.amharic_dictionary import Dictionary
 
 class SpellChecker:
     def __init__(self, corpus, ngram_size, dictionary_path):
