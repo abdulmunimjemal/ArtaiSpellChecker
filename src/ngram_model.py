@@ -27,8 +27,9 @@ def build_ngram_model(corpus: list, n: int) -> dict:
         sentence = tokenizer.tokenize(sentence)
         ngrams = generate_ngrams(sentence, n)
         for ngram in ngrams:
+            ngram = " ".join(ngram)
             if ngram in ngram_model:
-                ngram_model[" ".join(ngram)] += 1
+                ngram_model[ngram] += 1
             else:
-                ngram_model[" ".join(ngram)] = 1
+                ngram_model[ngram] = 1
     return ngram_model
