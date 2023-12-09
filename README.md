@@ -2,10 +2,10 @@
 
 Artai Spell Checker is a simple spell checker implemented in Python. It uses a combination of Damerau-Levenshtein distance and N-gram models to check and suggest corrections for misspelled words. It is done as a group course project.
 
-Campus: Addis Ababa Institue of Technology.
-Department: Software and Information Technology Engineering
-Course: Fundamentals of Software Engineering I.
-Advisor: Instructor Nuniyat Kifle
+- **Campus**: Addis Ababa Institue of Technology.
+- **Department**: Software and Information Technology Engineering
+- **Course**: Fundamentals of Software Engineering I.
+- **Advisor**: Instructor Nuniyat Kifle
 
 Group Members
 
