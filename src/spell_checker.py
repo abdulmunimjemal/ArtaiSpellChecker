@@ -19,17 +19,17 @@ class SpellChecker:
                 suggestions.append(candidate)
         return suggestions[:num_suggestions]
 
-    def check_spelling(self, word, threshold=0.95):
+    def check_spelling(self, word, threshold=0.99):
         """
         Check the spelling of the given word.
         """
-        result = self.dictionary.look(word)
-        if result:
-            return True
+        return self.dictionary.look(word)
+        # if result:
+        #     return True
         
-        for candidate in self.corpus:
-            distance = damerau_levenshtein_distance(word, candidate)
-            similarity = 1 - distance / max(len(word), len(candidate))
-            if similarity > threshold:
-                return True
-        return False
+        # # for candidate in self.dictionary.get_words():
+        # #     distance = levenshtein_distance(word, candidate)
+        # #     similarity = 1 - distance / max(len(word), len(candidate))
+        # #     if similarity > threshold:
+        # #         return True
+        # return False
