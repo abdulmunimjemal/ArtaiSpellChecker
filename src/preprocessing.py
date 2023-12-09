@@ -5,9 +5,11 @@ def remove_non_amharic(text: str) -> str:
     """
     Remove non-Amharic characters from the text.
     """
-    amharic_pattern = re.compile("[ሀ-ቿ]+")
-    return " ".join(amharic_pattern.findall(text))
-
+    amharic_pattern = re.compile('[ሀ-፼ ]+')
+    matches = amharic_pattern.findall(text)
+    cleaned_text = ''.join(matches)
+    return cleaned_text
+   
 def normalize(text: str) -> str:
     """
     Normalize Amharic Text
@@ -20,7 +22,7 @@ def preprocess(text: str) -> str:
     """
     Perform general preprocessing steps on the input text.
     """
-    text = remove_non_amharic(text)
     text = normalize(text)
-
+    text = remove_non_amharic(text)
+    
     return text
