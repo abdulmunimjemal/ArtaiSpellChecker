@@ -51,15 +51,10 @@ python main.py
 
 - **artai_spell_checker/**
   - **src/**
-    - **spell_checker/**
-      - `__init__.py`: Initialization file for the `spell_checker` module.
-      - `spell_checker.py`: Implementation of the `SpellChecker` class.
-    - **damerau_levenshtein/**
-      - `__init__.py`: Initialization file for the `damerau_levenshtein` module.
-      - `damerau_levenshtein.py`: Implementation of the Damerau-Levenshtein distance.
-    - **ngram_model/**
-      - `__init__.py`: Initialization file for the `ngram_model` module.
-      - `ngram_model.py`: Implementation of N-gram model functions.
+    - `__init__.py`: Initialization file for the `spell_checker` module.
+    - `spell_checker.py`: Implementation of the `SpellChecker` class.
+    - `damerau_levenshtein.py`: Implementation of the Damerau-Levenshtein distance.
+    - `ngram_model.py`: Implementation of N-gram model functions.
     - **utils/**
       - `__init__.py`: Initialization file for the `utils` module.
       - `file_reader.py`: Implementation of file reading functions.
