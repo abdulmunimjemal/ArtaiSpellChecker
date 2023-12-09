@@ -17,18 +17,18 @@ class AmharicSegmenter:
         for index, char in enumerate(text):
             if char == " ":
                 if word:
-                    tokens.append(word)
+                    tokens.append(word) if word not in self.WORD_PUNC else None
                 word = ""
             elif char in self.WORD_PUNC:
                 if word and prev_char != char:
-                    tokens.append(word)
+                    tokens.append(word) if word not in self.WORD_PUNC else None
                     word = ""
                 prev_char = char
                 word += char
             else:
                 word += char
         
-        if word:
+        if word and word not in self.WORD_PUNC:
             tokens.append(word)
         
         return tokens
