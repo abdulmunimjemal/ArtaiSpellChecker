@@ -51,15 +51,11 @@ python main.py
 
 - **artai_spell_checker/**
   - **src/**
-    - **spell_checker/**
-      - `__init__.py`: Initialization file for the `spell_checker` module.
-      - `spell_checker.py`: Implementation of the `SpellChecker` class.
-    - **damerau_levenshtein/**
-      - `__init__.py`: Initialization file for the `damerau_levenshtein` module.
-      - `damerau_levenshtein.py`: Implementation of the Damerau-Levenshtein distance.
-    - **ngram_model/**
-      - `__init__.py`: Initialization file for the `ngram_model` module.
-      - `ngram_model.py`: Implementation of N-gram model functions.
+    - `__init__.py`: Initialization file for the `spell_checker` module.
+    - `spell_checker.py`: Implementation of the `SpellChecker` class.
+    - `damerau_levenshtein.py`: Implementation of the Damerau-Levenshtein distance.
+    - `ngram_model.py`: Implementation of N-gram model functions.
+    - `train.py`: Training and usage of a bigram language model on the corpus for suggestion ranking.
     - **utils/**
       - `__init__.py`: Initialization file for the `utils` module.
       - `file_reader.py`: Implementation of file reading functions.
@@ -69,11 +65,11 @@ python main.py
     - `main.py`: Main script for running the spell checker.
     - `user_interface.py`: (Optional) Implementation of a user interface.
     - `preprocessing.py`: Implementation of Amahric text preprocessing functions.
-    - `requirements.txt`: List of project dependencies.
-    - `README.md`: Project documentation.
-
+  
 - **data/**
   - `amharic_dictionary.txt`: Dictionary file with Amharic words.
   - `amharic_corpus.txt`: Corpus file with Amharic sentences.
 
 - `LICENSE`: Project license file.
+- `requirements.txt`: List of project dependencies.
+- `README.md`: Project documentation.
