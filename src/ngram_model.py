@@ -1,9 +1,9 @@
 from utils.amharic_tokenizer import AmharicSegmenter
-from preprocessing import preprocess
+from preprocessing import AmharicTextProcessor
 from nltk.util import ngrams
 import pickle
 
-# ngram_model.py
+preprocess = AmharicTextProcessor().preprocess
 
 class NgramModel:
     def __init__(self, corpus: str, ngram_size=2):
@@ -47,4 +47,3 @@ class NgramModel:
         ngram_count = self.get_ngram_count(ngram)
         total_count = sum(self.ngram_counts.values())
         return (ngram_count + 1) / (total_count + len(self.ngram_counts))
-    

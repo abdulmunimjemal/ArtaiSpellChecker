@@ -1,7 +1,7 @@
 import sys, threading, itertools
 from utils.file_reader import read_file, read_lines
 from ngram_model import NgramModel
-from spell_checker import SpellChecker
+from test import SpellChecker
 import time
 
 dictionary_path = 'data/amharic_dictionary.txt'
